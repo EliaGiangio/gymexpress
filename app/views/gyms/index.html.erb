@@ -1,2 +1,7 @@
 <h1>GYMExpress</h1>
-
+<h2>Hour locations:</h2>
+<ul>
+  <% @gyms.each do |gym|%>
+    <%= gym.name %>
+  <%end%>
+</ul>
