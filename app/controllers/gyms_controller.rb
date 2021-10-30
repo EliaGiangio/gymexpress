@@ -9,12 +9,10 @@ class GymsController < ApplicationController
 
   def new
     @gym = Gym.new
-    @gym.barbells.build
   end
 
   def create
     @gym = Gym.new(gym_params)
-    @gym.barbells.build
 
     if @gym.save
       redirect_to @gym
@@ -25,7 +23,6 @@ class GymsController < ApplicationController
 
   def edit
     @gym = Gym.find(params[:id])
-    @gym.barbells.build
 
 
   end

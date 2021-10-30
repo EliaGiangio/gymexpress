@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_174121) do
+ActiveRecord::Schema.define(version: 2021_10_30_150402) do
 
   create_table "barbells", force: :cascade do |t|
-    t.integer "type"
     t.integer "weight"
     t.integer "gym_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "brand"
     t.index ["gym_id"], name: "index_barbells_on_gym_id"
   end
 

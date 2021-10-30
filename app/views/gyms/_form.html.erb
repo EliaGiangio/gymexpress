@@ -15,22 +15,7 @@
     <% end %>
   </div>
 
-  Barbells:
-  <ul>
-    <%= form.fields_for :barbells do |barbells_form| %>
 
-        <%= barbells_form.label :type %>
-        <%= barbells_form.number_field :type %>
-        <br>
-        <%= barbells_form.label :weight %>
-        <%= barbells_form.number_field :weight %>
-        kg
-        <br>
-        Delete the current barbell set-up?
-        <%= barbells_form.check_box :_destroy %>
-
-    <% end %>
-  </ul>
 
 
   <div>

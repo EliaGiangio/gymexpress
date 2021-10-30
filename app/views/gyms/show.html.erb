@@ -3,7 +3,8 @@
 <p> <%= @gym.description%> </p>
 
 <% @gym.barbells.each do |barbell| %>
-<p> <%= barbell.weight %> kg </p>
+<p> <%= barbell.brand %></p>
+<p> <%= barbell.weight %>kg </p>
 <% end %>
 
 <%= link_to "HOME", gyms_path(@gym) %>

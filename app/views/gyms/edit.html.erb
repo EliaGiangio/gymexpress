@@ -1,3 +1,19 @@
 <h1>Edit Gym</h1>
 
 <%= render "form", gym: @gym %>
+
+<h2>Is a barbell provvided:</h2>
+<%= form_with model: [ @gym, @gym.barbells.build ] do |form| %>
+  <p>
+    <%= form.label :brand %><br>
+    <%= form.text_field :brand %>
+  </p>
+  <p>
+    <%= form.label :weight %><br>
+    <%= form.number_field :weight %>kg
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
