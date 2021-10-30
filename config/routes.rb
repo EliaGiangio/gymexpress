@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   #get "/gyms/:id", to:"gyms#show"
   resources :gyms do
     resources :barbells
+  end
 end
