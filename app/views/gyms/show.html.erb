@@ -9,7 +9,7 @@
     <p> Weight: <%= barbell.weight %>kg </p>
   <% end %>
 
-<%= link_to "HOME", gyms_path(@gym) %>
+<%= link_to "HOME", gyms_path %>
 <%= link_to "Modify entry", edit_gym_path(@gym) %>
 <%= link_to "Delete", gym_path(@gym),
                   method: :delete,
