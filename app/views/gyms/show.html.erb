@@ -1,11 +1,13 @@
-<h1>HERE YOU'LL SEE A NICE PIC OF THE LOCATION</h1>
+<%= image_tag @gym.logo %>
 <h2> <%= @gym.name%> </h2>
 <p> <%= @gym.description%> </p>
 
-<% @gym.barbells.each do |barbell| %>
-<p> <%= barbell.brand %></p>
-<p> <%= barbell.weight %>kg </p>
-<% end %>
+<h3> Equipment </h3>
+
+  <% @gym.barbells.each do |barbell| %>
+    <p> Brand: <%= barbell.brand %></p>
+    <p> Weight: <%= barbell.weight %>kg </p>
+  <% end %>
 
 <%= link_to "HOME", gyms_path(@gym) %>
 <%= link_to "Modify entry", edit_gym_path(@gym) %>

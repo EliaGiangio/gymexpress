@@ -15,7 +15,7 @@ class GymsController < ApplicationController
     @gym = Gym.new(gym_params)
 
     if @gym.save
-      redirect_to @gym
+      redirect_to root_path
     else
       render :new
     end
@@ -46,7 +46,7 @@ class GymsController < ApplicationController
 
   private
     def gym_params
-      params.require(:gym).permit(:name, :description, barbells_attributes: [:_delete])
+      params.require(:gym).permit(:name, :description, :logo, barbells_attributes: [:_delete])
     end
 
 end

@@ -15,8 +15,14 @@
     <% end %>
   </div>
 
-
-
+  <h3>Please include the link of your gym's pic</h3>
+  <div>
+    <%= form.label :logo %><br>
+    <%= form.text_field :logo %>
+    <% gym.errors.full_messages_for(:logo).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
 
   <div>
     <%= form.submit %>

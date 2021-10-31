@@ -1,15 +1,4 @@
-<h1>Edit Gym</h1>
-
-<%= render "form", gym: @gym %>
-
-<h2>Provvided barbells:</h2>
-
-<% @gym.barbells.each do |barbell| %>
-<p> Brand: <%= barbell.brand %></p>
-<p> Weight <%= barbell.weight %>kg </p>
-<% end %>
-
-<h3>Add more:</h3>
+<h2>Included barbells</h2>
 <%= form_with model: [ @gym, @gym.barbells.build ] do |form| %>
   <p>
     <%= form.label :brand %><br>
@@ -23,4 +12,3 @@
     <%= form.submit %>
   </p>
 <% end %>
-
