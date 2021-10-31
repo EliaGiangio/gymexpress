@@ -1,44 +1,28 @@
+.subtitle{
+  margin: auto;
+  width: 400%;
+  padding: 10px;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 250px 0;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+  font-size: 92px;
   font-weight: bold;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 50px;
   color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 10px 10px 15px rgba(0,0,0,0.7);
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 5fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
-
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 
 

@@ -1,16 +1,24 @@
-<%= image_tag @gym.logo %>
-<h2> <%= @gym.name%> </h2>
-<p> <%= @gym.description%> </p>
+<div class="container container-gym">
+  <%= image_tag @gym.logo %>
+  <h2> <%= @gym.name%> </h2>
+  <p> <%= @gym.description%> </p>
+</div>
 
-<h3> Equipment </h3>
+<div class="container container-equipment">
+  <h3> Equipment </h3>
 
-  <% @gym.barbells.each do |barbell| %>
-    <p> Brand: <%= barbell.brand %></p>
-    <p> Weight: <%= barbell.weight %>kg </p>
-  <% end %>
+    <% @gym.barbells.each do |barbell| %>
+      <div class="barbells">
+          <p> Brand: <%= barbell.brand %></p>
+          <p> Weight: <%= barbell.weight %>kg </p>
+      </div>
+    <% end %>
+</div>
 
+<div class="container container-options">
 <%= link_to "HOME", gyms_path %>
 <%= link_to "Modify entry", edit_gym_path(@gym) %>
 <%= link_to "Delete", gym_path(@gym),
                   method: :delete,
                   data: { confirm: "Do you really want to get rid of this place?" } %>
+</div>

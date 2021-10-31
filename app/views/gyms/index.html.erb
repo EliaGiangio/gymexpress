@@ -1,36 +1,25 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: url(https://s3-us-west-2.amazonaws.com/issuewireassets/primg/14456/highest-quality-crossfit-equipment.jpg);">
   <div class="container">
     <h1>GYMExpress</h1>
     <p>Rent homegyms near you!</p>
+    <p><%= link_to "Add your homegym", new_gym_path %></p>
   </div>
 </div>
 
-
+<div class="subtitle">
 <h2>Our locations:</h2>
-
-<%= link_to "Add your homegym", new_gym_path %>
-
+</div>
 
 
-<div class="cards">
-  <% @gyms.each do |gym|%>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <li><%= link_to gym.name, gym %></li>
+
+
+<% @gyms.each do |gym|%>
+<div  class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2><%= link_to gym.name, gym %></h2>
+    <p><%= gym.description %></p>
   </div>
 </div>
 <%end%>
-
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
-  </div>
-</div>
